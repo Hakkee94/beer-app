@@ -50,7 +50,6 @@ export default function Home() {
               <button onClick={handleResetBear}>Reset</button>
           </div>
 
-          /* eslint-disable
           <div>
               {beers.map((beer:any, index) => {
                   return <div className='beer-cart' key={Math.random() + 1}>
@@ -65,7 +64,6 @@ export default function Home() {
                   </div>
               })}
           </div>
-          */
 
           <div className='arrows'>
               <div onClick={handlePaginate('left')} className='arrow'>{'<-'}</div>
