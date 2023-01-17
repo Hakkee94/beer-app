@@ -21,6 +21,8 @@ const Index = () => {
     }
     return (
         <div className='beer-cart'>
+            /* eslint-disable
+
             <h1><span>Beer name: </span>{beer.name}</h1>
             <h2><span>Description: </span> {beer.description}</h2>
             <h3><span>Tagline: </span>{beer.tagline}</h3>
@@ -29,6 +31,8 @@ const Index = () => {
             <div className='beer-image'>
                 <img src={beer.image_url} alt={'beer picture'}/>
             </div>
+            */
+
         </div>
     );
 };
