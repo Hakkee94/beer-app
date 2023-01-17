@@ -1,19 +1,16 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Link from 'next/link'
-// import '../styles/styles.scss'
+import Image from "next/image";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-
     const [search, setSearch] = useState<string>('')
     const [beers, setBeers] = useState([])
-
     const [page, setPage] = useState<number>(1)
     const [perPage, setPerPage] = useState<number>(10)
 
@@ -27,8 +24,7 @@ export default function Home() {
 
     useEffect(() => {
         axios.get(`https://api.punkapi.com/v2/beers?page=${page}&per_page=${perPage}${search?'&beer_name='+search:''}`).then(({data}) => setBeers(data))
-    }, [page, perPage])
-
+    }, [page, perPage, search])
 
     const handleSearchBeer = () => {
         axios.get(`https://api.punkapi.com/v2/beers?${search?'&beer_name='+search:''}`).then(({data}) => setBeers(data))
@@ -52,19 +48,18 @@ export default function Home() {
               <input value={search} type={"text"} onChange={event => setSearch(event.target.value)}/>
               <button onClick={handleSearchBeer}>Search</button>
               <button onClick={handleResetBear}>Reset</button>
-
           </div>
 
           <div>
               {beers.map((beer:any) => {
-                  return <div className='beer-cart'>
+                  return <div className='beer-cart' key={1}>
                       <Link href={'/'+beer.id}>
                           {beer.name}
                       </Link>
                       <h2>{beer.description}</h2>
 
                       <div className='beer-image'>
-                          <img src={beer.image_url}/>
+                          <img src={beer.image_url} alt={'beer picture'}/>
                       </div>
                   </div>
               })}
