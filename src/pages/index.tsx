@@ -5,7 +5,6 @@ import styles from '@/styles/Home.module.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Link from 'next/link'
-import Image from "next/image";
 
 const inter = Inter({ subsets: ['latin'] })
 
