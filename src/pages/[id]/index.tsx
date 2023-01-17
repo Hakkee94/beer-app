@@ -26,7 +26,7 @@ const Index = () => {
             <h3><span>Abv: </span> {beer.abv}</h3>
             <h3><span>Food pairing: </span> {beer.food_pairing}</h3>
             <div className='beer-image'>
-                <img src={beer.image_url} alt={'beer picture'}/>
+                <img src={beer.image_url} alt={'beer picture'}/> // eslint-disable-line
             </div>
         </div>
     );

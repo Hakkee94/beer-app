@@ -59,7 +59,7 @@ export default function Home() {
                       <h2>{beer.description}</h2>
 
                       <div className='beer-image'>
-                          <img src={beer.image_url} alt={'beer picture'}/>
+                          <img src={beer.image_url} alt={'beer picture'}/> // eslint-disable-line
                       </div>
                   </div>
               })}
