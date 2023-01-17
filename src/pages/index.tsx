@@ -51,8 +51,8 @@ export default function Home() {
           </div>
 
           <div>
-              {beers.map((beer:any) => {
-                  return <div className='beer-cart' key={1}>
+              {beers.map((beer:any, index) => {
+                  return <div className='beer-cart' key={Math.random() + 1}>
                       <Link href={'/'+beer.id}>
                           {beer.name}
                       </Link>
