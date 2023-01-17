@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Image from "next/image";
 
 const inter = Inter({ subsets: ['latin'] })
+/* eslint-disable */
 
 export default function Home() {
     const [search, setSearch] = useState<string>('')
@@ -59,7 +60,7 @@ export default function Home() {
                       <h2>{beer.description}</h2>
 
                       <div className='beer-image'>
-                          <img src={beer.image_url} alt={'beer picture'}/> // eslint-disable-line
+                          <img src={beer.image_url} alt={'beer picture'}/>
                       </div>
                   </div>
               })}

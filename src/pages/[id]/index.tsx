@@ -3,8 +3,9 @@ import axios from "axios";
 import {useRouter} from "next/router";
 import Image from "next/image";
 
-const Index = () => {
 
+const Index = () => {
+    /* eslint-disable */
     const [beer, setBeer] = useState<any>(null)
     const router = useRouter()
     useEffect(() => {
@@ -26,7 +27,7 @@ const Index = () => {
             <h3><span>Abv: </span> {beer.abv}</h3>
             <h3><span>Food pairing: </span> {beer.food_pairing}</h3>
             <div className='beer-image'>
-                <img src={beer.image_url} alt={'beer picture'}/> // eslint-disable-line
+                <img src={beer.image_url} alt={'beer picture'}/>
             </div>
         </div>
     );
