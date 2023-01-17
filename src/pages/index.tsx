@@ -59,7 +59,7 @@ export default function Home() {
                       <h2>{beer.description}</h2>
 
                       <div className='beer-image'>
-                          <img src={beer.image_url} alt={'beer picture'}/>
+                          <Image height={400} width={200} src={beer.image_url} alt={'beer picture'}/>
                       </div>
                   </div>
               })}
